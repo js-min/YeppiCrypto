@@ -19,6 +19,7 @@
 		D9295A93285237D400947D84 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9295A92285237D400947D84 /* CoinRowView.swift */; };
 		D9295A952852383400947D84 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9295A942852383400947D84 /* PreviewProvider.swift */; };
 		D9295A9728523BC900947D84 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9295A9628523BC900947D84 /* Double.swift */; };
+		D9AA3E6428577C9900B71E72 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AA3E6328577C9900B71E72 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D9295A92285237D400947D84 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		D9295A942852383400947D84 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		D9295A9628523BC900947D84 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		D9AA3E6328577C9900B71E72 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		D9295A862851627400947D84 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D9AA3E6328577C9900B71E72 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9295A93285237D400947D84 /* CoinRowView.swift in Sources */,
+				D9AA3E6428577C9900B71E72 /* HomeViewModel.swift in Sources */,
 				D9295A722850D06A00947D84 /* ContentView.swift in Sources */,
 				D9295A882851628700947D84 /* HomeView.swift in Sources */,
 				D9295A702850D06A00947D84 /* YeppiCryptoApp.swift in Sources */,

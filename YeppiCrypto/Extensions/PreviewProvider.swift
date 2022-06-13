@@ -222,6 +222,7 @@ class DeveloperPreview {
     priceChangePercentage24HInCurrency: -0.12172620425238369,
     currentHoldings: 1.5)
   
+  let homeVM = HomeViewModel()
 }
 
 

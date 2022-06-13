@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct YeppiCryptoApp: App {
-    var body: some Scene {
-        WindowGroup {
-          NavigationView {
-            HomeView()
-              .navigationBarHidden(true)
-          }
-        }
+  
+  @StateObject private var vm = HomeViewModel()
+  
+  var body: some Scene {
+    WindowGroup {
+      NavigationView {
+        HomeView()
+          .navigationBarHidden(true)
+      }
+      .environmentObject(vm)
     }
+  }
 }
