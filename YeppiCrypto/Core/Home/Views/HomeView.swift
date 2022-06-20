@@ -12,6 +12,9 @@ struct HomeView: View {
   @EnvironmentObject private var vm: HomeViewModel
   @State private var showPortfolio: Bool = false // animate right
   @State private var showPortfolioView: Bool = false // new sheet
+  
+  @State private var selectedCoin: Coin? = nil
+  @State private var showDetailView: Bool = false
 
   
   var body: some View {
@@ -50,6 +53,13 @@ struct HomeView: View {
         
       }
     }
+    .background(
+      // Cell 마다 NavigationLink를 걸면 모든 detail 뷰들이 미리 초기화되는 현상이 있어서 이렇게 구현했음.
+      NavigationLink(
+        destination: DetailLoadingView(coin: $selectedCoin),
+        isActive: $showDetailView,
+        label: { EmptyView() })
+    )
   }
 }
 
@@ -99,6 +109,9 @@ extension HomeView {
       ForEach(vm.allCoins) { coin in
         CoinRowView(coin: coin, showHoldingsColumn: false)
           .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
+          .onTapGesture {
+            segue(coin: coin)
+          }
       }
     }
     .listStyle(PlainListStyle())
@@ -112,6 +125,11 @@ extension HomeView {
       }
     }
     .listStyle(PlainListStyle())
+  }
+  
+  private func segue(coin: Coin) {
+    selectedCoin = coin
+    showDetailView = true
   }
   
   private var columnTitles: some View {

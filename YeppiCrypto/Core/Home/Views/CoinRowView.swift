@@ -20,6 +20,12 @@ struct CoinRowView: View {
       }
       rightColumn
     }
+    .font(.subheadline)
+    .background(
+      // 투명한 부분은 tap 이 안먹히기때문에 
+      Color.theme.background.opacity(0.001)
+    )
+  
   }
 }
 
