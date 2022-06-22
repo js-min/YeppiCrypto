@@ -44,6 +44,7 @@ class DetailViewModel: ObservableObject {
         self?.websiteURL = returnedCoinDetail?.links?.homepage?.first
         self?.redditURL = returnedCoinDetail?.links?.subredditURL
       }
+      .store(in: &cancellables)
   }
   
   private func mapStats(coinDetailModel: CoinDetail?, coinModel: Coin) -> (overview: [StatisticModel], additional: [StatisticModel]){
